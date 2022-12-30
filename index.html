@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- title tag -->
+    <title>Students Portel</title>
+  </head>
+  <body>
+    <!-- body head -->
+    <header>
+      <h2>Student Portel</h2>
+    </header>
+    <!-- body main  -->
+    <main class="container-main">
+      <!-- Searching elements  section-->
+      <section class="searching-area">
+        <input type="text" id="search-text" placeholder="Search" />
+        <button id="search-btn">Search</button>
+      </section>
+      <!-- sorting elements section -->
+      <section class="sorting-area">
+        <button id="sort-az" class="sorting-btn">Sort A→Z</button>
+        <button id="sort-za" class="sorting-btn">Sort Z→A</button>
+        <button id="sort-marks" class="sorting-btn">Sort By Marks</button>
+        <button id="sort-passing" class="sorting-btn">Sort By Passing</button>
+        <button id="sort-class" class="sorting-btn">Sort By Class</button>
+        <button id="sort-gender" class="sorting-btn">Sort By Gender</button>
+      </section>
+      <!-- tables section -->
+      <section class="table-area">
+        <table id="stu-table">
+          <thead>
+            <tr>
+              <td id="id">ID</td>
+              <td id="name">Name</td>
+              <td>Gender</td>
+              <td>Class</td>
+              <td>Marks</td>
+              <td>Passing</td>
+              <td>Email</td>
+            </tr>
+          </thead>
+          <tbody id="students"></tbody>
+        </table>
+        <table id="male-stu" class="stu-table">
+          <thead>
+            <tr>
+              <td id="id">ID</td>
+              <td id="name">Name</td>
+              <td>Gender</td>
+              <td>Class</td>
+              <td>Marks</td>
+              <td>Passing</td>
+              <td>Email</td>
+            </tr>
+          </thead>
+          <tbody id="studentsMale"></tbody>
+        </table>
+      </section>
+    </main>
+    <!-- javascript link -->
+    <script src="script.js">
+      fatch('./MOCK_DATA.json')
+    </script>
+  </body>
+</html>
